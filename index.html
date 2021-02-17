@@ -8,16 +8,32 @@
 </head>
 <body>
     <h1>you are online</h1>
-    <div id="result"></div>
+    <div id="res"></div>
+    <button id="resBtn">Detect</button>
 
     <script>
-        document.addEventListener("DOMContentLoaded",funtion(){
+        document.addEventListener('DOMContentLoaded',function(){
+            let resDiv = document.getElementById('res');
+            let myBtn = document.getElementById('resBtn');
+
+            myBtn.addEventListener('click',function(){
+               // console.log('clicked');
+               resDiv.innerHTML = "Connection : " + navigator.onLine;
+            });
+        });
+    </script>
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded',function(){
+
             function onlineDetector() {
+
                 setTimeout(function(){
                 if(navigator.online == false){
-                    window.location.href ="offline.html";
+                    window.location.href="offline.html"; 
                 }
             },1000);
+
             }
             
         });
@@ -25,6 +41,6 @@
         onlineDetector();
 
         setInterval(onlineDetector,1000);
-    </script>
+    </script> -->
 </body>
 </html>
