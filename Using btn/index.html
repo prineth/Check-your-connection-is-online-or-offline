@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online checker</title>
 </head>
-<body>
+<body> 
     <h1>you are online</h1>
-    <div id="res"></div>
-    <button id="resBtn">Detect</button>
+    <div id="result"></div>
+    <button id="resultBtn">Detect</button>
 
     <script>
         document.addEventListener('DOMContentLoaded',function(){
-            let resDiv = document.getElementById('res');
-            let myBtn = document.getElementById('resBtn');
+            let resultDiv = document.getElementById('result');
+            let myBtn = document.getElementById('resultBtn');
 
             myBtn.addEventListener('click',function(){
-               // console.log('clicked');
-               resDiv.innerHTML = "Connection : " + navigator.onLine; //not online it's "onLine"
+               // console.log('clicked'); //check is your btn is working
+               resultDiv.innerHTML = "Connection : " + navigator.onLine; //not online it's "onLine"
             });
         });
     </script>
