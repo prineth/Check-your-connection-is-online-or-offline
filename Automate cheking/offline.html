@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online checker</title>
+</head>
+<body> 
+    <h1>you are offline</h1>
+    <!-- <div id="result"></div>
+    <button id="resultBtn">Detect</button> -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+
+            // let resultDiv = document.getElementById('result');
+            // let myBtn = document.getElementById('resultBtn');
+
+            // myBtn.addEventListener('click',function(){
+            //    // console.log('clicked'); //check is your btn is working
+            //    resultDiv.innerHTML = "Connection : " + navigator.onLine; //not online it's "onLine"
+            // });
+
+            function onlineDetector(){
+
+                setTimeout(function() {
+                if(navigator.onLine == true) { //not online it's "onLine"
+                    window.location.href ="javascript:history.go(-1)";
+                }
+            },1000);
+
+            }
+            
+        });
+
+        onlineDetector();
+
+        setInterval(onlineDetector,1000);
+    </script>
+
+
+</body>
+</html>
